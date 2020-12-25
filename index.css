@@ -1,0 +1,16 @@
+#profile {
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 20%;
+}
+
+#profile > * {
+  margin: auto;
+  display: block;
+}
+
+p {
+  display: block;
+  text-align: center;
+}
