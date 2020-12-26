@@ -19,9 +19,73 @@ async function load_gh_data() {
     }
   ];
   await Promise.all(datas.map(async (d) => {
-    let json = await fetch(d.link).then(r => r.json())
+    let json = await fetch(d.link, {
+      headers: {
+        "Authorization": "token shhhhhh"
+      }
+    }).then(r => r.json())
     gh_data[d.name] = json;
   }));
+}
+
+async function load_projects() {
+  const projects = await fetch("./projects.json").then(r => r.json());
+  let space = document.querySelector("#projectsSpace");
+  await Promise.all(projects.map(async (project) => {
+    let projectCard = await createProjectCard(project);
+    space.appendChild(projectCard);
+  }));
+}
+
+async function createProjectCard(project) {
+  let card = document.createElement("div");
+  card.classList.add("project-card");
+  const info = await fetch(`https://api.github.com/repos/${project.name}`, {
+    headers: {
+      "Authorization": "token shhhhhh"
+    }
+  })
+    .then(r => r.json());
+
+  card.appendChild(createProjectTitle(info));
+  card.appendChild(createProjectDescription(info));
+  card.appendChild(createProjectStars(info));
+  return wrapCardWithLink(card, 
+                          `https://www.github.com/${info.full_name}`);
+}
+
+function createProjectDescription(info) {
+  let description = document.createElement("p");
+  description.textContent = info.description;
+  return description;
+}
+
+function createProjectStars(info) {
+  let img = document.createElement("img");
+  img.src = `https://img.shields.io/github/stars/${info.full_name}?style=social`;
+  img.classList.add("star-count");
+  return img;
+}
+
+function createProjectTitle(info) {
+  let title = document.createElement("h3");
+  title.classList.add("project-title");
+  title.textContent = info.name;
+  return title;
+}
+
+function wrapWithLink(ele, link) {
+  let surround = document.createElement('a');
+  surround.href = link;
+  surround.style.textDecoration = "none";
+  surround.appendChild(ele);
+  return surround;
+}
+
+function wrapCardWithLink(ele, link) {
+  let wrapped = wrapWithLink(ele, link);
+  wrapped.classList.add("project-card-wrapper");
+  return wrapped;
 }
 
 (async () => {
@@ -29,7 +93,7 @@ async function load_gh_data() {
   infoSections.forEach(section => {
     let header = document.createElement("h2");
     header.classList.add("section-header");
-    header.textContent = section.title;
+    header.textContent = section.getAttribute("name");
     section.prepend(header);
   });
 
@@ -38,6 +102,7 @@ async function load_gh_data() {
   let promises = [
     fill_bio(),
     set_avatar(),
+    load_projects(),
   ];
   await Promise.all(promises);
 })()

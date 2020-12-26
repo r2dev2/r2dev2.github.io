@@ -8,18 +8,23 @@
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
+  font-family: 'verdana light';
 }
 
 h1 {
   color: #E5E5E5;
 }
 
-h2, h3, h4, h5, h6 {
+h2 {
   color: var(--heading-color);
 }
 
 a {
   color: var(--primary-color);
+}
+
+span, .project-card {
+  color: var(--font-color);
 }
 
 .flex-container {
@@ -47,4 +52,35 @@ a {
 
 .section-header {
   text-transform: capitalize;
+}
+
+#projectsSpace {
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.project-card {
+  background-color: #252525;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.project-card-wrapper {
+  width: 30%;
+  transition: 1s;
+}
+
+.project-card-wrapper:hover {
+  width: 33%;
+  font-size: 1.1rem;
+  transition: 1s;
+}
+
+.star-count {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
 }
