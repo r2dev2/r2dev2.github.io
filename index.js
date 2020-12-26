@@ -31,10 +31,12 @@ async function load_gh_data() {
 async function load_projects() {
   const projects = await fetch("./projects.json").then(r => r.json());
   let space = document.querySelector("#projectsSpace");
-  await Promise.all(projects.map(async (project) => {
-    let projectCard = await createProjectCard(project);
-    space.appendChild(projectCard);
-  }));
+  await Promise.all(projects.map(createProjectCard))
+    .then(cards => {
+      cards.map(c => {
+        space.appendChild(c)
+      });
+    });
 }
 
 async function createProjectCard(project) {
@@ -49,14 +51,21 @@ async function createProjectCard(project) {
 
   card.appendChild(createProjectTitle(info));
   card.appendChild(createProjectDescription(info));
+  card.appendChild(createProjectCardBuffer());
   card.appendChild(createProjectStars(info));
   return wrapCardWithLink(card, 
                           `https://www.github.com/${info.full_name}`);
 }
 
+function createProjectCardBuffer() {
+  let buf = document.createElement("div");
+  buf.style.height = "100%";
+  return buf;
+}
+
 function createProjectDescription(info) {
   let description = document.createElement("p");
-  description.textContent = info.description;
+  description.textContent = info.description
   return description;
 }
 

@@ -55,8 +55,13 @@ span, .project-card {
 }
 
 #projectsSpace {
-  flex-flow: row wrap;
   width: 100%;
+  flex-flow: row wrap;
+  margin: auto;
+}
+
+#projectsSpace > * {
+  display: block;
 }
 
 .project-card {
@@ -66,17 +71,21 @@ span, .project-card {
   padding: 3%;
   border-radius: 8px;
   width: 100%;
+  height: 100%;
 }
 
 .project-card-wrapper {
-  width: 30%;
-  transition: 1s;
+  width: 28em;
+  height: 10em;
+  transition: 0.2s ease-in-out;
+  padding: 1.50%;
+  padding-top: 0;
+  padding-bottom: 3%;
 }
 
 .project-card-wrapper:hover {
-  width: 33%;
-  font-size: 1.1rem;
-  transition: 1s;
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
 }
 
 .star-count {
