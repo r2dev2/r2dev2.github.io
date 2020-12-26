@@ -1,6 +1,8 @@
 const username = "r2dev2bb8";
 let gh_data = {};
 
+const fetchConfig = { };
+
 async function set_avatar() {
   let pfpImg = document.querySelector("#profilepic");
   pfpImg.src = gh_data.general.avatar_url;
@@ -19,11 +21,7 @@ async function load_gh_data() {
     }
   ];
   await Promise.all(datas.map(async (d) => {
-    let json = await fetch(d.link, {
-      headers: {
-        "Authorization": "token shhhhhh"
-      }
-    }).then(r => r.json())
+    let json = await fetch(d.link, fetchConfig).then(r => r.json())
     gh_data[d.name] = json;
   }));
 }
@@ -42,11 +40,7 @@ async function load_projects() {
 async function createProjectCard(project) {
   let card = document.createElement("div");
   card.classList.add("project-card");
-  const info = await fetch(`https://api.github.com/repos/${project.name}`, {
-    headers: {
-      "Authorization": "token shhhhhh"
-    }
-  })
+  const info = await fetch(`https://api.github.com/repos/${project.name}`, fetchConfig)
     .then(r => r.json());
 
   card.appendChild(createProjectTitle(info));
