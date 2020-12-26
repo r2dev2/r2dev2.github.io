@@ -1,6 +1,31 @@
+:root {
+    --primary-color: #9A97F3;
+    --font-color: #e5e5e5;
+    --bg-color: #151515;
+    --heading-color: #818cab;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+h1 {
+  color: #E5E5E5;
+}
+
+h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--primary-color);
+}
+
 .flex-container {
   display: flex;
   flex-direction: column;
+  padding: 5px;
 }
 
 #profile {
@@ -23,4 +48,3 @@
 .section-header {
   text-transform: capitalize;
 }
-
