@@ -3,12 +3,13 @@
     --font-color: #e5e5e5;
     --bg-color: #151515;
     --heading-color: #818cab;
+    --card-color: #252525;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
-  font-family: 'verdana light';
+  font-family: verdana, sans-serif;
 }
 
 h1 {
@@ -67,7 +68,7 @@ span, .project-card {
 }
 
 .project-card {
-  background-color: #252525;
+  background-color: var(--card-color);
   display: flex;
   flex-direction: column;
   padding: 3%;
