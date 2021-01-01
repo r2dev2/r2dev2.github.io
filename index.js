@@ -1,4 +1,4 @@
-const username = "r2dev2bb8";
+const username = "r2dev2";
 let gh_data = {};
 
 const fetchConfig = { };
@@ -73,6 +73,7 @@ function createProjectStars(info) {
 function createProjectTitle(info) {
   let title = document.createElement("h3");
   title.classList.add("project-title");
+  title.classList.add("capitalize");
   title.textContent = info.name;
   return title;
 }
@@ -95,7 +96,7 @@ function wrapCardWithLink(ele, link) {
   let infoSections = document.querySelectorAll("section");
   infoSections.forEach(section => {
     let header = document.createElement("h2");
-    header.classList.add("section-header");
+    header.classList.add("capitalize");
     header.textContent = section.getAttribute("name");
     section.prepend(header);
   });

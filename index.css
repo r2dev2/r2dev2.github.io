@@ -50,14 +50,16 @@ span, .project-card {
   text-align: center;
 }
 
-.section-header {
+.capitalize {
   text-transform: capitalize;
 }
 
 #projectsSpace {
   width: 100%;
-  flex-flow: row wrap;
-  margin: auto;
+  display: grid;
+  gap: 3em;
+  grid-template-columns: repeat(auto-fill, 28em);
+  margin-bottom: 3em;
 }
 
 #projectsSpace > * {
@@ -78,9 +80,8 @@ span, .project-card {
   width: 28em;
   height: 10em;
   transition: 0.2s ease-in-out;
-  padding: 1.50%;
   padding-top: 0;
-  padding-bottom: 3%;
+  padding-bottom: 0;
 }
 
 .project-card-wrapper:hover {
