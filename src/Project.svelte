@@ -3,8 +3,10 @@
   export let description;
 
   $: title = name.split('/')[1];
+  $: href = `https://github.com/${name}`;
 </script>
 
+<a {href}>
 <div class="project-card">
   <h3>{title}</h3>
   <p>{description}</p>
@@ -14,6 +16,7 @@
       alt="{name}'s star count" />
   </div>
 </div>
+</a>
 
 <style>
   .project-card {
@@ -41,5 +44,16 @@
     height: auto;
     width: 6rem;
     margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: unset;
+    transition: 0.2s ease-in-out;
+  }
+
+  a:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
   }
 </style>
