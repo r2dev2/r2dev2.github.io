@@ -1,5 +1,6 @@
 <script>
   import projects from './projects.js';
+  import Project from './Project.svelte';
 </script>
 
 <main>
@@ -19,7 +20,7 @@
   <section name="Projects">
     <h2>Projects</h2>
     {#each projects as project}
-      <p>{project.name}</p>
+      <Project {...project} />
     {/each}
   </section>
 
