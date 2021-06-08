@@ -19,9 +19,11 @@
 
   <section name="Projects">
     <h2>Projects</h2>
-    {#each projects as project}
-      <Project {...project} />
-    {/each}
+    <div class="projects">
+      {#each projects as project}
+        <Project {...project} />
+      {/each}
+    </div>
   </section>
 
   <section name="Contact Info">
@@ -65,5 +67,12 @@
 
   .profile {
     text-align: center;
+  }
+
+  .projects {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 </style>

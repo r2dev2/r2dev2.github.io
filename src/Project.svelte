@@ -23,6 +23,7 @@
     padding: 1rem;
     border-radius: .5rem;
     margin: 1rem;
+    width: 30rem;
   }
 
   .center {
