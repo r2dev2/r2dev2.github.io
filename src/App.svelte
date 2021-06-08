@@ -1,51 +1,68 @@
 <script>
-  import { onMount } from 'svelte'
-
-  export let name
-
-  let counter = 0 // @hmr:keep
-
-  onMount(() => {
-    const interval = setInterval(() => {
-      counter++
-    }, 1000)
-
-    return () => {
-      clearInterval(interval)
-    }
-  })
-
+  import projects from './projects.js';
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to
-    learn how to build Svelte apps.
-  </p>
-  <p>
-    This page has been open for {counter}s.
-  </p>
+  <div class="profile">
+    <img
+      src="https://avatars3.githubusercontent.com/u/50760816?s=460&u=5d982fdca816f9ad156e4f0b66d0e97e71e37e58&v=4"
+      class="pfp"
+      alt="Ronak's profile picture" />
+    <h1>Ronak Badhe</h1>
+  </div>
+
+  <section name="About">
+    <h2>About</h2>
+    I'm a 16 year old developer at Lynbrook High School. I play chess and am interested in full stack development and machine learning.
+  </section>
+
+  <section name="Projects">
+    <h2>Projects</h2>
+    {#each projects as project}
+      <p>{project.name}</p>
+    {/each}
+  </section>
+
+  <section name="Contact Info">
+    <h2>Contact Info</h2>
+    Contact me via a lichess direct message over <a href="https://lichess.org/@/r2d2bb8">here</a>.
+  </section>
 </main>
 
 <style>
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
+  :global(:root) {
+    --primary-color: #9A97F3;
+    --font-color: #e5e5e5;
+    --bg-color: #151515;
+    --heading-color: #818cab;
+    --card-color: #252525;
+  }
+  
+  :global(body) {
+    background-color: var(--bg-color);
+    color: var(--font-color);
   }
 
   h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
+    margin-top: 0;
     font-weight: 100;
+    font-size: 4rem;
   }
 
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
+  h2 {
+    color: var(--heading-color);
+  }
+
+  main {
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  .pfp {
+    width: 10rem;
+  }
+
+  .profile {
+    text-align: center;
   }
 </style>
