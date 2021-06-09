@@ -14,6 +14,7 @@
   <div class="center">
     <img
       src="https://img.shields.io/github/stars/{name}?style=social"
+      height="22"
       alt="{name}'s star count" />
   </div>
 </div>

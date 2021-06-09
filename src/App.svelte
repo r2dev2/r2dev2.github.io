@@ -8,6 +8,8 @@
     <img
       src="https://avatars3.githubusercontent.com/u/50760816?s=460&u=5d982fdca816f9ad156e4f0b66d0e97e71e37e58&v=4"
       class="pfp"
+      width="160"
+      height="160"
       alt="Ronak's profile picture" />
     <h1>Ronak Badhe</h1>
   </div>
@@ -67,6 +69,10 @@
 
   .profile {
     text-align: center;
+  }
+
+  a {
+    color: #0099FF;
   }
 
   .projects {
