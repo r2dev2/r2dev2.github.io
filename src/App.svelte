@@ -76,4 +76,12 @@
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
+
+  @media screen and (max-width: 600px) {
+    .projects {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+  }
 </style>
