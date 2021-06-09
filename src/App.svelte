@@ -70,10 +70,10 @@
   }
 
   .projects {
-    display: flex;
+    display: grid;
     width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 </style>

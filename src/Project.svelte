@@ -50,9 +50,8 @@
     text-decoration: none;
     color: unset;
     transition: 0.2s ease-in-out;
-    width: min(100%, 30rem);
+    width: calc(100% - 2rem);
     height: 8rem;
-    margin-right: 2rem;
     margin-bottom: 4rem;
   }
 
@@ -60,24 +59,4 @@
     transform: scale(1.05);
     transition: 0.2s ease-in-out;
   }
-
-  @media screen and (max-width: 2110px) {
-    a {
-      width: 31%;
-    }
-  }
-
-  @media screen and (max-width: 1500px) {
-    a {
-      width: 45%;
-    }
-  }
-
-  @media screen and (max-width: 1100px) {
-    a {
-      width: 100%;
-    }
-  }
-
-  
 </style>
