@@ -10,6 +10,7 @@
 <div class="project-card">
   <h3>{title}</h3>
   <p>{description}</p>
+  <div style="height: 100%;" />
   <div class="center">
     <img
       src="https://img.shields.io/github/stars/{name}?style=social"
@@ -25,8 +26,7 @@
     flex-direction: column;
     padding: 1rem;
     border-radius: .5rem;
-    margin: 1rem;
-    width: 30rem;
+    height: 100%;
   }
 
   .center {
@@ -50,10 +50,9 @@
     text-decoration: none;
     color: unset;
     transition: 0.2s ease-in-out;
-  }
-
-  a:hover {
-    transform: scale(1.05);
-    transition: 0.2s ease-in-out;
+    width: 30rem;
+    height: 8rem;
+    margin-right: 2rem;
+    margin-bottom: 4rem;
   }
 </style>
