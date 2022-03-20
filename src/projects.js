@@ -4,6 +4,10 @@ export default [
     description: "Get live translations from YouTube streams, crowdsourced from multilingual viewers!"
   },
   {
+    name: "r2dev2/Sozai",
+    description: "UI framework with vuetify-like material components built with Svelte"
+  },
+  {
     name: "r2dev2/WayChess",
     description: "A modern design, open source, fully featured chess GUI."
   },
