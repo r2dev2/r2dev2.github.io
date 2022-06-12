@@ -8,6 +8,10 @@ export default [
     description: "UI framework with vuetify-like material components built with Svelte"
   },
   {
+    name: "r2dev2/cryptoduel",
+    description: "A multiplayer cryptogram game where the fastest cryptogram solver wins!"
+  },
+  {
     name: "r2dev2/WayChess",
     description: "A modern design, open source, fully featured chess GUI."
   },
