@@ -3,7 +3,12 @@
   import Project from './Project.svelte';
 </script>
 
+<div class="profile">
+  <img src="eyes.webp" alt="Ronak's eyes" />
+  <h1>Ronak Badhe</h1>
+</div>
 <main>
+  <!--
   <div class="profile">
     <img
       src="https://avatars3.githubusercontent.com/u/50760816?s=460&u=5d982fdca816f9ad156e4f0b66d0e97e71e37e58&v=4"
@@ -13,10 +18,11 @@
       alt="Ronak's profile picture" />
     <h1>Ronak Badhe</h1>
   </div>
+  -->
 
   <section name="About">
     <h2>About</h2>
-    I'm a 16 year old developer at Lynbrook High School. I play chess and am interested in full stack development and machine learning.
+    I'm a 17 year old developer at Lynbrook High School. I play chess and am interested in full stack development and machine learning.
   </section>
 
   <section name="Projects">
@@ -38,6 +44,7 @@
   :global(:root) {
     --primary-color: #9A97F3;
     --font-color: #e5e5e5;
+    --accent-color: #1f5265;
     --bg-color: #151515;
     --heading-color: #818cab;
     --card-color: #252525;
@@ -46,12 +53,22 @@
   :global(body) {
     background-color: var(--bg-color);
     color: var(--font-color);
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
   }
 
   h1 {
-    margin-top: 0;
-    font-weight: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 1000;
     font-size: 4rem;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    -webkit-text-stroke: 1px var(--accent-color);
   }
 
   h2 {
@@ -68,6 +85,7 @@
   }
 
   .profile {
+    position: relative;
     text-align: center;
   }
 

@@ -8,7 +8,7 @@ export default [
     description: "UI framework with vuetify-like material components built with Svelte"
   },
   {
-    name: "r2dev2/cryptoduel",
+    name: "r2dev2/Cryptoduel",
     description: "A multiplayer cryptogram game where the fastest cryptogram solver wins!"
   },
   {
