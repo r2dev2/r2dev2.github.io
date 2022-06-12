@@ -22,7 +22,8 @@
 
   <section name="About">
     <h2>About</h2>
-    I'm a 17 year old developer at Lynbrook High School. I play chess and am interested in full stack development and machine learning.
+    I'm a 17 year old developer from Lynbrook High School interning at <a href="https://axiado.com/">Axiado</a>.
+    I play chess and am interested in full stack development and machine learning.
   </section>
 
   <section name="Projects">
@@ -58,6 +59,8 @@
 
   img {
     width: 100%;
+    filter: blur(10px);
+    transform: scale(1.1);
   }
 
   h1 {
@@ -87,6 +90,7 @@
   .profile {
     position: relative;
     text-align: center;
+    overflow: hidden;
   }
 
   a {
