@@ -22,7 +22,7 @@
 
   <section name="About">
     <h2>About</h2>
-    I'm a 17 year old developer from Lynbrook High School interning at <a href="https://axiado.com/">Axiado</a>.
+    I'm a 18 year old developer from Lynbrook High School interning at <a href="https://axiado.com/">Axiado</a>.
     I play chess and am interested in full stack development and machine learning.
   </section>
 
