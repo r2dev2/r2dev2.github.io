@@ -12,6 +12,10 @@ export default [
     description: "A multiplayer cryptogram game where the fastest cryptogram solver wins!"
   },
   {
+    name: "r2dev2/Stareye",
+    description: "Time races with two phones using motion detection!"
+  },
+  {
     name: "r2dev2/WayChess",
     description: "A modern design, open source, fully featured chess GUI."
   },
