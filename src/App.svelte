@@ -22,7 +22,7 @@
 
   <section name="About">
     <h2>About</h2>
-    I'm a 18 year old developer at UCLA.
+    I'm a 19 year old developer at UCLA, interning at <a href="https://cadence.com">Cadence</a>.
     I play chess and am interested in full stack development and machine learning.
   </section>
 
