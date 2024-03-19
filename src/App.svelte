@@ -1,4 +1,5 @@
 <script>
+  import people from './people.js';
   import projects from './projects.js';
   import Project from './Project.svelte';
   import Header from './Header.svelte';
@@ -36,6 +37,18 @@
   <section name="Contact Info">
     <h2>Contact Info</h2>
     Contact me via a lichess direct message over <a href="https://lichess.org/@/r2d2bb8">here</a>.
+  </section>
+
+  <section name="Cool People">
+    <h2>Cool People</h2>
+    I think these people are pretty cool, go check them out!
+    <div class="cool-people">
+      {#each people as { link, badge, title }}
+        <a class="person" {title} href={link}>
+          <img src={badge} {title} alt={title} width="64" height="64" />
+        </a>
+      {/each}
+    </div>
   </section>
 </main>
 
@@ -82,6 +95,22 @@
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
+  .cool-people {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+  }
+
+  .cool-people .person img {
+    border-radius: 10%;
+  }
+
+  .cool-people .person:hover {
+    filter: brightness(50%);
   }
 
   @media screen and (max-width: 600px) {
