@@ -37,6 +37,7 @@
 
   .eyes {
     width: 100%;
+    min-height: 200px;
     filter: blur(20px);
     transform: scale(1.1);
     user-select: none;
@@ -109,11 +110,12 @@
 
   @media screen and (max-width: 800px) {
     h1 {
-      font-size: 2rem;
-      margin-bottom: 0.125rem;
+      font-size: 3rem;
+      white-space: nowrap;
     }
+
     .links a {
-      --mult: 0.4;
+      --mult: 0.8;
     }
   }
 </style>

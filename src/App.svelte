@@ -8,11 +8,23 @@
 <main>
   <section name="About">
     <h2>About</h2>
-    I'm a 19 year old developer at UCLA, interning at <a href="https://cadence.com">Cadence</a>.
-    I play chess and am interested in full stack development and machine learning.
+    <div class="two-col">
+      <div class="col">
+        <img src="./pfp.webp" alt="picture of me!" width="150px" height="150px" style="justify-content: left; border-radius: 50%;" />
+      </div>
+      <div class="col">
+        Hi! I'm a developer and hacker (the cybersecurity kind) at UCLA. You might know me from:
+        <ul>
+          <li>former intern at <a href="https://cadence.com">Cadence</a> and <a href="http://axiado.com">Axiado</a></li>
+          <li>maintainer of <a href="https://livetl.app">LiveTL</a> (I am <a href="https://github.com/r2dev2">r2dev2</a>) and various other <a href="./projects">open source software</a></li>
+          <li>CTFs with <a href="https://ctftime.org/team/186494">PBR | UCLA</a>, I also write web challenges for <a href="https://lac.tf">LaCTF</a> (I am r2uwu2)</li>
+          <li>chess - my lichess is <a href="https://lichess.org/@/r2d2bb8">r2d2bb8</a>, send me a challenge!</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <section name="Projects">
+  <section name="Projects" style="display: none;">
     <h2>Projects</h2>
     <div class="projects">
       {#each projects as project}
@@ -33,7 +45,9 @@
     --font-color: #e5e5e5;
     --accent-color: #1f5265;
     --bg-color: #151515;
-    --heading-color: #818cab;
+    /* --heading-color: #818cab; */
+    --heading-color: #ba8e76;
+    /* --heading-color: #7e604b; */
     --card-color: #252525;
     --blue: #0099FF;
   }
@@ -57,6 +71,11 @@
     color: var(--blue);
   }
 
+  .two-col {
+    display: flex;
+    flex-direction: row;
+  }
+
   .projects {
     display: grid;
     width: 100%;
@@ -70,6 +89,17 @@
       display: flex;
       width: 100%;
       flex-direction: column;
+    }
+
+    .two-col {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .col:first-child {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
     }
   }
 </style>
