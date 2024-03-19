@@ -17,26 +17,13 @@
         Hi! I'm a developer and hacker (the cybersecurity kind) at UCLA. You might know me from:
         <ul>
           <li>former intern at <a href="https://cadence.com">Cadence</a> and <a href="http://axiado.com">Axiado</a></li>
-          <li>maintainer of <a href="https://livetl.app">LiveTL</a> (I am <a href="https://github.com/r2dev2">r2dev2</a>) and various other <a href="./projects">open source software</a></li>
+          <li>maintainer of <a href="https://livetl.app">LiveTL</a> (I am <a href="https://github.com/r2dev2">r2dev2</a>) and various other <a href="#projects">open source software</a></li>
           <li>CTFs with <a href="https://ctftime.org/team/186494">PBR | UCLA</a>, I also write web challenges for <a href="https://lac.tf">LaCTF</a> (I am r2uwu2)</li>
           <li>chess - my lichess is <a href="https://lichess.org/@/r2d2bb8">r2d2bb8</a>, send me a challenge!</li>
         </ul>
       </div>
     </div>
-  </section>
-
-  <section name="Projects" style="display: none;">
-    <h2>Projects</h2>
-    <div class="projects">
-      {#each projects as project}
-        <Project {...project} />
-      {/each}
-    </div>
-  </section>
-
-  <section name="Contact Info">
-    <h2>Contact Info</h2>
-    Contact me via a lichess direct message over <a href="https://lichess.org/@/r2d2bb8">here</a>.
+    <p>Contact me via a lichess direct message over <a href="https://lichess.org/@/r2d2bb8">here</a>.</p>
   </section>
 
   <section name="Cool People">
@@ -47,6 +34,16 @@
         <a class="person" {title} href={link}>
           <img src={badge} {title} alt={title} width="64" height="64" />
         </a>
+      {/each}
+    </div>
+  </section>
+
+  <section name="Projects" id="projects">
+    <h2>Projects</h2>
+    <p>I have developed many open source projects, some more useful than others. Maybe one will suit your needs!</p>
+    <div class="projects">
+      {#each projects as project}
+        <Project {...project} />
       {/each}
     </div>
   </section>
@@ -63,6 +60,7 @@
     /* --heading-color: #7e604b; */
     --card-color: #252525;
     --blue: #0099FF;
+    scroll-behavior: smooth;
   }
   
   :global(body) {
