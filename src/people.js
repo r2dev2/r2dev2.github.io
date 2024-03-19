@@ -11,6 +11,11 @@ export default [
   },
   { link: 'https://enzo.run', badge: './badges/enzo.webp', title: 'Enzo' },
   {
+    link: 'https://aplet.me',
+    badge: './badges/aplet.webp',
+    title: 'Aplet123'
+  },
+  {
     link: 'https://danirukun.com',
     badge: './badges/danirukun.webp',
     title: 'DaniruKun',
