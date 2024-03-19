@@ -102,10 +102,16 @@
   }
 
   h1 {
+    /* dark brown sampled from my eyes */
+    --outline-color: #7e604b;
     font-weight: 1000;
     font-size: 4rem;
     margin: 0 0 1rem 0;
-    -webkit-text-stroke: 1px var(--accent-color);
+    text-shadow:
+        -1px -1px 0 var(--outline-color),
+        -1px 1px 0 var(--outline-color),
+        1px -1px 0 var(--outline-color),
+        1px 1px 0 var(--outline-color);
   }
 
   @media screen and (max-width: 800px) {
