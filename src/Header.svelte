@@ -3,7 +3,7 @@
   <div class="info">
     <h1>Ronak Badhe</h1>
     <div class="links">
-      <a href="https://github.com/r2dev2/CTF">
+      <a href="https://hackmd.io/@r2dev2">
         <!-- flag svg from google material icons -->
         <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#FFFFFF" style="--len: 103">
           <path d="M14 6l-1-2H5v17h2v-7h5l1 2h7V6h-6zm4 8h-4l-1-2H7V6h5l1 2h5v6z"/>
