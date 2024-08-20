@@ -18,7 +18,7 @@
         <ul>
           <li>former intern at <a href="https://cadence.com">Cadence</a> and <a href="http://axiado.com">Axiado</a></li>
           <li>maintainer of <a href="https://livetl.app">LiveTL</a> (I am <a href="https://github.com/r2dev2">r2dev2</a>) and various other <a href="#projects">open source software</a></li>
-          <li>CTFs with <a href="https://ctftime.org/team/186494">PBR | UCLA</a>, I also write web security challenges for <a href="https://lac.tf">LaCTF</a> (I am r2uwu2)</li>
+          <li>CTFs with <a href="https://pbr.acmcyber.com/">PBR | UCLA</a>, I also write web security challenges for <a href="https://lac.tf">LaCTF</a> (I am r2uwu2)</li>
           <li>chess - my lichess is <a href="https://lichess.org/@/r2d2bb8">r2d2bb8</a>, send me a challenge!</li>
         </ul>
       </div>
